@@ -66,7 +66,7 @@ delugeUsername = "deluge" #Replace with your deluge username
 delugePassword = "deluge" #Replace with your deluge password
 myWebhookURL = "https://discordapp.com/api/webhooks/some/stuff" #Replace with your Discord Webhook URL 
 sendTag = True #Set to False (capital 'F') if you want it to send a message, but not tag you.
-myDiscordID = "123456789012345678" #Set to your 18 digit Discord ID (NOT YOUR 4 digit code like username#6969) - right click on your username to copy ID.
+myDiscordID = "123456789012345678" #ONLY required is senTag is True. Set to your 18 digit Discord ID (NOT YOUR 4 digit code like username#6969) - right click on your username to copy ID.
 ratioCheckDelay = 60 #Number of seconds after torrent completion to send another ratio update. Set to 0 to disable.
 bot_username = "TorrentBot" #The username that will appear as the sender fo rnotifications. Set to whatever u want
 
