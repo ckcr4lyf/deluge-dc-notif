@@ -112,8 +112,11 @@ def query(torrentHash, torrentName, delayTime=0, delayCall=False):
             #Also want to get the ratio we ended with
             i1 = lines[5].index("Ratio: ")
             ratio_word = lines[5][i1:]
+            msg = "Completed torrent!"
+            if delayCall == True:
+                msg = "After " + str(delayTime) + " seconds, ratio update:"
 
-            myBot.send_msg("Completed torrent!", torrentName, tracker, ratio_word)
+            myBot.send_msg(msg, torrentName, tracker, ratio_word)
 
             if (delayTime > 0 and delayCall == False):
                 delay = Timer(delayTime, query, (torrentHash, torrentName, delayTime, True))
