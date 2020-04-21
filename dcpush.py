@@ -115,7 +115,7 @@ def query(torrentHash, torrentName, delayTime=0, delayCall=False):
 
             myBot.send_msg("Completed torrent!", torrentName, tracker, ratio_word)
 
-            if (RATIO_CHECK_DELAY > 0):
+            if (delayTime > 0 and delayCall == False):
                 delay = Timer(delayTime, query, (torrentHash, torrentName, delayTime, True))
                 delay.start()
 
