@@ -1,22 +1,32 @@
 # Deluge Discord Notifications!
 
 This script when configured with deluge, will send you a notification when a torrent is added along with the tracker name.
-WHen a torrent is completed, it will send you a message with the name, tracker and RATIO.
+When a torrent is completed, it will send you a message with the name, tracker, ratio & size.
 
 Optionally, you can set a second delay, e.g. 60 seconds, and then 60 seconds after torrent completion it will send another message with updated ratio.
+
+## Thanks
+
+<center>
+
+[<img src="https://user-images.githubusercontent.com/6680615/88460516-56eac500-cecf-11ea-8552-584eaaac5297.png" width="300">](https://clients.walkerservers.com/)
+
+Massive Thanks to <a href="https://clients.walkerservers.com/">WalkerServers</a> for sponsoring this project. Check them out for affordable & performant dedicated servers!
+</center>
+
 
 ## Setup
 
 You must be the owner of a discord server (prefarably set up a private server for this), and [create a discord webhook](https://support.discordapp.com/hc/en-us/articles/228383668-Intro-to-Webhooks) for a channel in it.  You will need the Webhook URL you get for the script.
 
-You need to download the script `dcpush.py` from the repo to your seedbox, you can do it using:
+You need to clone this repository and go into it next, for which you can run:
 
+```sh
+git clone https://github.com/ckcr4lyf/deluge-dc-notif.git
+cd deluge-dc-notif
 ```
-wget https://github.com/ckcr4lyf/deluge-dc-notif/raw/master/dcpush.py
-```
-IMPORTANT: If you are "updating" the script, perhaps save a backup of the old one, you will need to set the variables again.
 
-In this script, you will need to set the Webhook URL you generated, along with a few more things:
+Next, we need to configure certain variables in `delugePushConfig.py`. The explanation for the variables is as follows:
 
 |Variable|Explanation|
 |--------|-----------|
@@ -31,16 +41,24 @@ In this script, you will need to set the Webhook URL you generated, along with a
 |BOT_AVATAR|The avatar (image URL) of the bot which sends the message. PNG advised|
 |DELUGE_VERSION|Your deluge version. Default `1.3.15`, only the first character counts. So `2.0.1` and `2.0.3` have same effect|
 
-Edit the file `dcpush.py` to set these values.
+Open `delugePushConfig.py` in whatever editor you prefer to make the changes, and then save.
 
-Make the script executable with:
+Next, make the main script executable by running:
 
 ```
-chmod +x dcpush.py
+chmod +x delugePush.py
 ```
 
-then, add the whole path to deluge execute plugin, same for both "Torrent Added" and "Torent Complete"
+Then, add the whole path to deluge execute plugin. If you do not know the complete path, you can run
+```sh
+echo "$PWD/delugePush.py"
+```
+in your terminal to get it.
 
-E.g. path: `/some/thing/scripts/dcpush.py`
+It should look something like
+```
+/home/username/scripts/deluge-dc-notif/delugePush.py
+```
+Add this for both `Torrent Added` & `Torrent Completed` in Deluge.
 
 Restart deluge, and hopefully, next time a torrent is added, it will work!

@@ -1,0 +1,10 @@
+DELUGE_PORT = "58846" #Replace with the port for deluge daemon (NOT WEBUI) on your seedbox
+DELUGE_USERNAME = "deluge" #Replace with your deluge username
+DELUGE_PASSWORD = "deluge" #Replace with your deluge password
+WEBHOOK_URL = "https://discordapp.com/api/webhooks/[some]]/[stuff here]" #Replace with your Discord Webhook URL 
+SEND_TAG = False #Set to False (capital 'F') if you want it to send a message, but not tag you. Set to True (capital 'T') if you want a tag. Must supply discord ID
+DISCORD_ID = "123456789012345678" #ONLY required is sendTag is True. Set to your 18 digit Discord ID (NOT YOUR 4 digit code like username#6969) - right click on your username to copy ID.
+RATIO_CHECK_DELAY = 0 #Number of seconds after torrent completion to send another ratio update. Set to 0 to disable.
+BOT_USERNAME = "Deluge" #The username that will appear as the sender fo rnotifications. Set to whatever u want
+BOT_AVATAR = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Deluge-Logo.svg/1200px-Deluge-Logo.svg.png" #Avatar of the "bot" in discord. PNG recommened
+DELUGE_VERSION = "1.3.15" #Only the first character matches, so 2.0.3 will be same as 2.0.1, and 1.3.15 same as 1.3.0. Make sure first character is 1 (or 2) only.
