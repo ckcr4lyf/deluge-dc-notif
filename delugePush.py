@@ -88,7 +88,7 @@ def getState(torrentHash, torrentName, delayTime=0, delayCall=False):
 
         torrentSize = getSize(lines)
         trackerIndex1 = delugeConsoleResult.find('\nTracker status:')
-        trackerIndex2 = delugeConsoleResult.find(':', trackerIndex1 + 1)
+        trackerIndex2 = delugeConsoleResult.find(':', trackerIndex1 + 17)
         tracker = delugeConsoleResult[trackerIndex1+17:trackerIndex2]
         torrentNameMessage = torrentName + " ({})".format(torrentSize)
 

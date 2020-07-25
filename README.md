@@ -1,6 +1,6 @@
-# Deluge Discord Notifications!
+# Deluge Discord Notifications
 
-This script when configured with deluge, will send you a notification when a torrent is added along with the tracker name.
+This script when configured with Deluge, will send you a notification when a torrent is added along with the tracker name.
 When a torrent is completed, it will send you a message with the name, tracker, ratio & size.
 
 Optionally, you can set a second delay, e.g. 60 seconds, and then 60 seconds after torrent completion it will send another message with updated ratio.
@@ -62,3 +62,11 @@ It should look something like
 Add this for both `Torrent Added` & `Torrent Completed` in Deluge.
 
 Restart deluge, and hopefully, next time a torrent is added, it will work!
+
+## Testing
+
+You can manually test the script by running
+```sh
+python delugePush.py [infohash]
+```
+Where `[infohash]` is a 40-character torrent hash. The torrent must exist in Deluge. If all goes well, you should get a notification!
