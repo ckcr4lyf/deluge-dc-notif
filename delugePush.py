@@ -64,8 +64,8 @@ def getState(torrentHash, torrentName, delayTime=0, delayCall=False):
     lines = delugeConsoleResult.split('\n')
 
     if (DELUGE_VERSION[0] == '2'):
-        if "Failed to connect to" in lines[1]:
-            print(lines[2]) # Prints the error from deluge back to the user
+        if "Failed to connect to" in lines[0]:
+            print(lines[0]) # Prints the error from deluge back to the user
             return
         tracker = lines[7][9:]
 
