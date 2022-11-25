@@ -43,6 +43,23 @@ Next, we need to configure certain variables in `delugePushConfig.py`. The expla
 
 Open `delugePushConfig.py` in whatever editor you prefer to make the changes, and then save.
 
+### Python Version
+
+On your machine, run:
+```
+python -V
+```
+
+to determine which version of python you're on, and accordingly which script to use.
+
+* For Python 2.x, use `delugePush.py`
+* For Python 3.x, use `delugePush3.py`
+
+The instructions below use `delugePush.py`, please adjust it if required
+
+### Adding to Deluge
+
+
 Next, make the main script executable by running:
 
 ```
