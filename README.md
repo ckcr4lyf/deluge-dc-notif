@@ -87,3 +87,11 @@ You can manually test the script by running
 python delugePush.py [infohash]
 ```
 Where `[infohash]` is a 40-character torrent hash. The torrent must exist in Deluge. If all goes well, you should get a notification!
+
+## Docker Setup
+
+If you run deluge in docker, then there may be a permission issue accessing the deluge config folder. 
+
+One naive solution is to `chmod -R 0777 /root` in the deluge container. If you are more concerned around permissions, you can try and make it tighter. If you find a more approrpriate fix please let me know!
+
+For more info, check out [this](https://github.com/ckcr4lyf/deluge-dc-notif/issues/6#issuecomment-1325211650) and [this](https://github.com/ckcr4lyf/deluge-dc-notif/issues/10#issuecomment-1383052525).
