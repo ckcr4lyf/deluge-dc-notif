@@ -37,8 +37,8 @@ Next, we need to configure certain variables in `delugePushConfig.py`. The expla
 |SEND_TAG|`True` if you want the message to "tag" you on discord, `False` if you want it to just be a message|
 |DISCORD_ID|Your 18 digit discord ID, if you set `SEND_TAG` to `True` in order to tag you|
 |RATIO_CHECK_DELAY|Seconds after completion to send second ratio notification. 0 to disable|
-|BOT_USERNAME|The username from which you'll receive the messages on discord|
-|BOT_AVATAR|The avatar (image URL) of the bot which sends the message. PNG advised|
+|BOT_USERNAME|The username from which you'll receive the messages on discord (Optional: leave as `""` to use the webhook default)|
+|BOT_AVATAR|The avatar (image URL) of the bot which sends the message. PNG advised (Optional: leave as `""` to use the webhook default)|
 |DELUGE_VERSION|Your deluge version. Default `1.3.15`, only the first character counts. So `2.0.1` and `2.0.3` have same effect|
 
 Open `delugePushConfig.py` in whatever editor you prefer to make the changes, and then save.
