@@ -35,10 +35,10 @@ def sendMessage(normalText, title, body, footer=""):
     }
 
     if BOT_USERNAME != "":
-        values.username = BOT_USERNAME
+        values['username'] = BOT_USERNAME
 
     if BOT_AVATAR != "":
-        values.avatar_url = BOT_AVATAR
+        values['avatar_url'] = BOT_AVATAR
 
     data = json.dumps(values)
     req = urllib2.Request(WEBHOOK_URL, data)
